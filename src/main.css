@@ -246,3 +246,161 @@ header {
     font-size: 0.75rem;
     white-space: nowrap;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        height: auto;
+        min-height: 60px;
+        padding: 0 4%;
+        gap: 1rem;
+    }
+
+    .leftH {
+        font-size: 1.4rem;
+        min-width: 0;
+    }
+
+    .siteName {
+        white-space: nowrap;
+    }
+
+    .rightH {
+        gap: 0.6rem;
+        min-width: 0;
+    }
+
+    .searchBar {
+        width: clamp(140px, 35vw, 250px);
+    }
+
+    .random {
+        max-width: 35px;
+    }
+
+    .profile {
+        height: 35px;
+        width: 35px;
+        flex-shrink: 0;
+    }
+
+
+    /* ---------- MAIN LAYOUT ---------- */
+
+    .middle {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+
+    .main {
+        width: 100%;
+        min-width: 0;
+        flex: 1;
+    }
+
+
+    /* ---------- SIDEBAR ---------- */
+
+    .sideBar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+
+        padding: 0.8rem 4%;
+        gap: 1.5rem;
+
+        font-size: 0.9rem;
+
+        box-shadow: none;
+        border-right: none;
+        border-bottom: 1px solid rgba(167, 139, 250, 0.15);
+
+        flex-shrink: 0;
+    }
+
+    .discover,
+    .user,
+    .misc {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        flex-shrink: 0;
+    }
+
+    .sideHeading {
+        display: none;
+    }
+
+    .sideText {
+        white-space: nowrap;
+        border-bottom: none;
+        padding: 0.45rem 0.6rem;
+        margin: 0;
+    }
+
+    .sideText:hover {
+        transform: none;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 2rem 5% 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .footerBrand {
+        max-width: 100%;
+    }
+
+    .footerLinks {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .footerCopyright {
+        white-space: normal;
+    }
+}
