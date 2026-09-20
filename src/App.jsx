@@ -3,7 +3,7 @@ import RouteNavigation from './routes'
 
 function App() {
   return(  
-    <BrowserRouter basename='/home'>
+    <BrowserRouter basename='/bookS/'>
       <RouteNavigation/>
     </BrowserRouter>
   );
