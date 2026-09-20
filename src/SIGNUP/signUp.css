@@ -1,0 +1,139 @@
+
+.cen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1em;
+}
+.backHome{
+    text-decoration: none;
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    background: #7e5ae0;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.SignUpContainer {
+    width: clamp(280px, 90vw, 560px);
+    margin: 60px auto;
+    padding: 40px 32px;
+    box-sizing: border-box;
+    background: #1B1829;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    color: #EEEAF8;
+    position: relative;
+}
+.SignUpHeader {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.SignUpTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.SignUpSubtitle {
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.SignUpForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.FormGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.FormGroup label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #c0c0c0;
+}
+
+.FormGroup input {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #3a3a3a;
+    background: #2a2a2a;
+    color: #f2f2f2;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.FormGroup input::placeholder {
+    color: #666;
+}
+
+.FormGroup input:focus {
+    border-color: #6c8cff;
+}
+
+.SignUpForm button {
+    margin-top: 8px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #7e5ae0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.SignUpForm button:hover {
+    background: #5a78e0;
+}
+
+.SignUpForm > div {
+    text-align: center;
+    font-size: 13px;
+    color: #a0a0a0;
+}
+
+.SignUpForm > div a,
+.SignUpForm > div a:visited {
+    color: #6c8cff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.SignUpForm > div a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .SignUpContainer {
+        margin: 20px auto;
+        padding: 24px 20px;
+    }
+}

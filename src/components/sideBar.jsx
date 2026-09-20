@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Sidebar(){
 
@@ -5,12 +6,13 @@ function Sidebar(){
         <div className="sideBar">
             <div className="discover">
                 <h3 className="sideHeading">DISCOVER</h3>
-                <div className="sideText">NOVELS</div>
-                <div className="sideText">LIGHT NOVELS</div>
-                <div className="sideText">MANGAS</div>
-                <div className="sideText">MANHWAS</div>
-                <div className="sideText">RANKING</div>
-                <div className="sideText">BROWSE</div>
+                <Link to='/' className="sideText" href="">HOME</Link>
+                <Link to='/novel' className="sideText" href="">NOVELS</Link>
+                <Link to='/lightNovel' className="sideText" href="">LIGHT NOVELS</Link>
+                <Link to='/mangas' className="sideText" href="">MANGAS</Link>
+                <Link to='/manhwas' className="sideText" href="">MANHWAS</Link>
+                <Link to='/ranking' className="sideText" href="">RANKING</Link>
+                <Link to='/browse' className="sideText" href="">BROWSE</Link>
             </div>
 
             <div className="user">

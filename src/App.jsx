@@ -1,22 +1,11 @@
-import Header from './components/Header.jsx'
-import Sidebar from './components/sideBar.jsx';
-import Footer from './components/Footer.jsx';
+import {BrowserRouter} from 'react-router-dom'
+import RouteNavigation from './routes'
 
 function App() {
-  return(
-    <div className='app'>
-        <Header/>
-
-        <div className='middle'>
-          <Sidebar/>
-
-          <div className='main'>
-            main
-
-            <Footer/>
-          </div>
-        </div>
-    </div>
+  return(  
+    <BrowserRouter basename='/home'>
+      <RouteNavigation/>
+    </BrowserRouter>
   );
 }
 

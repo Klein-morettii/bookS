@@ -1,7 +1,9 @@
 import random from '../assets/dice-solid-full.svg';
 import Search from './searchBar';
+import { Link } from "react-router-dom";
 
 function Header(){
+    let logged = false;
     return (
         <header>
             <div className="leftH">
@@ -12,7 +14,11 @@ function Header(){
             <div className="rightH">
                 <Search/>
                 <img src={random} alt="gamble" className='random'/> 
-                <button className="profile"> asdf</button>
+                {logged? (
+                    <button className="profileCircle">awsd</button>
+                ):(
+                    <Link className="profileSquare" to="/signIn">Log In</Link>
+                )}
             </div>
         </header>
     );

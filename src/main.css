@@ -28,7 +28,7 @@ header {
     width: 100%;
     box-sizing: border-box;
     justify-content: space-between;
-    height: 4.5vh;
+    height: 5vh;
     background-color: #1B1829;
     box-shadow: 0 5px 4px black;
     padding-left: 2%;
@@ -63,7 +63,7 @@ header {
   width: clamp(30px, 3vw, 50px);
   height: auto;
 }
-.search{
+#search{
   border-radius: 20px;
   border: none;
   width: 30vw;
@@ -73,20 +73,59 @@ header {
   height: 2em;
   padding: 10px;
 }
+#search:hover{
+    box-shadow: 3px 3px 4px black;
+}
 .random {
   width: clamp(20px, 2.5vw, 40px);
   height: auto;
 }
 
-.profile {
+.profileSquare {
+    text-decoration: none;
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    background: #7e5ae0;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.profileSquare:hover{
+  transform: scale(1.03);
+  background: var(--accent);
+  box-shadow: 2px 2px 3px black;
+} 
+.profileSquare:active{
+    transform: scale(0.96);
+}
+
+.profileCircle {
   width: clamp(20px, 3vw, 40px);
   height: clamp(20px, 3vw, 40px);
   border-radius: 50%;
+  border: none;
+  background: #ada0fa;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.profile:hover{
-  transform: scale(1.02);
+.profileCircle:hover{
+  transform: scale(1.03);
   box-shadow: 2px 2px 3px black;
 } 
+.profileCircle:active{
+    transform: scale(0.97);
+}
 
 /* middle */
 .app{
@@ -161,6 +200,7 @@ header {
 .sideText:active{
   transform: translateX(2px) scale(0.98);
 }
+
 .sideHeading{
   margin: 0 0 0.4em 0;
 
