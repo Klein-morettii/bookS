@@ -32,7 +32,7 @@ function SignIn(){
                     </div>
 
                     <button type='submit'>SIGN IN</button>
-                    <div>Dont have an account ? <Link to="/signUp">Sign Up</Link></div>
+                    <div className='signUpPrompt'>Dont have an account ? <Link to="/signUp">Sign Up</Link></div>
                 </form>
             </div>
             <Link className='backHome' to="/">BACK</Link>

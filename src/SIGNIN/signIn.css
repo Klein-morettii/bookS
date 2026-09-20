@@ -5,22 +5,6 @@
     align-items: center;
     gap: 0.1em;
 }
-.backHome{
-    text-decoration: none;
-    color: var(--text);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 8px 16px;
-    border-radius: 6px;
-    border: none;
-    background: #7e5ae0;
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-}
 .LoginContainer {
     width: clamp(280px, 90vw, 560px);
     margin: 60px auto;
@@ -101,9 +85,66 @@ a{
 .LoginForm button:hover {
     background: #5a78e0;
 }
+.signUpPrompt {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
 
 
+.signUpPrompt a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
 
+    transition: color 0.2s ease;
+}
+
+
+.signUpPrompt a:hover {
+    color: #c1adff;
+    text-decoration: underline;
+}
+
+
+.backHome {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.65rem 1.2rem;
+
+    border: 1px solid rgba(167, 139, 250, 0.25);
+    border-radius: 7px;
+
+    background-color: var(--surface);
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+.backHome:hover {
+    background-color: var(--card);
+    border-color: rgba(167, 139, 250, 0.5);
+    color: var(--accent);
+
+    transform: translateY(-1px);
+}
+
+
+.backHome:active {
+    transform: translateY(0);
+}
 
 
 

@@ -1,139 +1,282 @@
-
-.cen{
+.cen {
+    min-height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 0.1em;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
 }
-.backHome{
-    text-decoration: none;
-    color: var(--text);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 
-    padding: 8px 16px;
-    border-radius: 6px;
-    border: none;
-    background: #7e5ae0;
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-}
+
+/* =========================
+   SIGN UP CARD
+   ========================= */
+
 .SignUpContainer {
-    width: clamp(280px, 90vw, 560px);
-    margin: 60px auto;
-    padding: 40px 32px;
-    box-sizing: border-box;
-    background: #1B1829;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    color: #EEEAF8;
-    position: relative;
+    width: min(560px, 100%);
+    padding: 2.5rem 2rem;
+    background-color: var(--surface);
+    border: 1px solid rgba(167, 139, 250, 0.12);
+    border-radius: 14px;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(167, 139, 250, 0.04);
+    color: var(--text);
 }
+
+
+/* =========================
+   HEADER
+   ========================= */
+
 .SignUpHeader {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 2.5rem;
 }
 
 .SignUpTitle {
-    font-size: 24px;
+    color: var(--text);
+    font-size: 1.7rem;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .SignUpSubtitle {
-    font-size: 14px;
-    color: #a0a0a0;
+    color: var(--muted);
+    font-size: 0.9rem;
 }
+
+
+/* =========================
+   FORM
+   ========================= */
 
 .SignUpForm {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.7rem;
 }
+
+
+/* =========================
+   INPUT GROUP
+   ========================= */
 
 .FormGroup {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 6px;
 }
+
+
+/*
+    Label sits on the upper-left
+    border of the input.
+*/
 
 .FormGroup label {
-    font-size: 13px;
+    position: absolute;
+    top: -0.5rem;
+    left: 0.8rem;
+
+    padding: 0 0.35rem;
+
+    background-color: var(--surface);
+
+    color: var(--accent);
+    font-size: 0.75rem;
     font-weight: 600;
-    color: #c0c0c0;
+
+    z-index: 1;
 }
+
+
+/* =========================
+   INPUTS
+   ========================= */
 
 .FormGroup input {
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: 1px solid #3a3a3a;
-    background: #2a2a2a;
-    color: #f2f2f2;
-    font-size: 14px;
+    width: 100%;
+    height: 3.1rem;
+
+    padding: 0 0.9rem;
+
+    background-color: var(--card);
+    color: var(--text);
+
+    border: 1px solid rgba(167, 139, 250, 0.18);
+    border-radius: 7px;
+
+    font-size: 0.9rem;
+
     outline: none;
-    transition: border-color 0.15s ease;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
 }
+
 
 .FormGroup input::placeholder {
-    color: #666;
+    color: var(--muted);
+    opacity: 0.65;
 }
+
+
+.FormGroup input:hover {
+    border-color: rgba(167, 139, 250, 0.35);
+}
+
 
 .FormGroup input:focus {
-    border-color: #6c8cff;
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 2px rgba(167, 139, 250, 0.12);
+
+    background-color: #292440;
 }
+
+
+/* =========================
+   CREATE ACCOUNT BUTTON
+   ========================= */
 
 .SignUpForm button {
-    margin-top: 8px;
-    padding: 12px;
+    width: 100%;
+
+    margin-top: 0.4rem;
+    padding: 0.8rem;
+
     border: none;
-    border-radius: 6px;
-    background: #7e5ae0;
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
+    border-radius: 7px;
+
+    background-color: var(--accent);
+    color: #ffffff;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
     cursor: pointer;
-    transition: background 0.15s ease;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
 }
+
 
 .SignUpForm button:hover {
-    background: #5a78e0;
+    background-color: #b59cfb;
+
+    box-shadow:
+        0 5px 15px rgba(167, 139, 250, 0.2);
+
+    transform: translateY(-1px);
 }
 
-.SignUpForm > div {
+
+.SignUpForm button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   LOGIN LINK
+   ========================= */
+
+.LoginPrompt {
     text-align: center;
-    font-size: 13px;
-    color: #a0a0a0;
+    color: var(--muted);
+    font-size: 0.8rem;
 }
 
-.SignUpForm > div a,
-.SignUpForm > div a:visited {
-    color: #6c8cff;
+
+.LoginPrompt a {
+    color: var(--accent);
     text-decoration: none;
     font-weight: 600;
+
+    transition: color 0.2s ease;
 }
 
-.SignUpForm > div a:hover {
+
+.LoginPrompt a:hover {
+    color: #c1adff;
     text-decoration: underline;
 }
 
 
+/* =========================
+   BACK BUTTON
+   ========================= */
+
+.backHome {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.65rem 1.2rem;
+
+    border: 1px solid rgba(167, 139, 250, 0.25);
+    border-radius: 7px;
+
+    background-color: var(--surface);
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease;
+}
 
 
+.backHome:hover {
+    background-color: var(--card);
+    border-color: rgba(167, 139, 250, 0.5);
+    color: var(--accent);
+
+    transform: translateY(-1px);
+}
 
 
+.backHome:active {
+    transform: translateY(0);
+}
 
 
+/* =========================
+   MOBILE
+   ========================= */
 
+@media (max-width: 600px) {
 
+    .cen {
+        padding: 2rem 1rem;
+    }
 
-
-@media (max-width: 768px) {
     .SignUpContainer {
-        margin: 20px auto;
-        padding: 24px 20px;
+        padding: 2rem 1.25rem;
+        border-radius: 12px;
+    }
+
+    .SignUpTitle {
+        font-size: 1.4rem;
+    }
+
+    .SignUpSubtitle {
+        font-size: 0.8rem;
+    }
+
+    .SignUpForm {
+        gap: 1.5rem;
     }
 }
