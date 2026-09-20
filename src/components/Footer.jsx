@@ -14,7 +14,7 @@ function Footer(){
                     <a href="">ABOUT</a>
                     <a href="">FAQ</a>
                     <a href="">CONTACT</a>
-                    <a href="">
+                    <a href="https://github.com/Klein-morettii/bookS.git"  target="_blank" rel="noopener noreferrer">
                         <img src={git} alt="github" className='gitImg'/>
                         GITHUB
                     </a>
