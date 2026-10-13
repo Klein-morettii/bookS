@@ -69,7 +69,7 @@ header {
   width: 30vw;
   min-width: 250px;
   max-width: 600px;
-  /* width: clamp(250px, 30vw, 600px); */
+  width: clamp(250px, 30vw, 600px);
   height: 2em;
   padding: 10px;
 }
@@ -87,7 +87,6 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 8px 16px;
     border-radius: 6px;
     border: none;
@@ -147,6 +146,133 @@ header {
   min-width: 0;
   justify-content: space-between;
 }
+
+
+.herocontainer {
+    width: min(100%, 1000px);
+    margin: 3rem auto 4rem;
+    padding: 3rem 5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(139, 92, 246, 0.16),
+            transparent 55%
+        ),
+        #11101a;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Small decorative glow */
+.herocontainer::before {
+    content: "";
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: rgba(139, 92, 246, 0.18);
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+
+/* Heading */
+.herocontainer h2 {
+    position: relative;
+
+    margin: 0;
+
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+
+    color: var(--text);
+}
+
+
+/* Main description */
+.herocontainer > div:first-of-type {
+    max-width: 700px;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    color: var(--text-muted, #aaa7b8);
+}
+
+
+/* Create account button */
+.herocontainer .createAccount {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0.5rem;
+    padding: 0.8rem 1.5rem;
+
+    border-radius: 8px;
+
+    background: #8b5cf6;
+    color: white;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.herocontainer .createAccount:hover {
+    background: #9b73f7;
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.25);
+}
+
+
+.herocontainer .createAccount:active {
+    transform: translateY(0);
+}
+
+
+/* Disclaimer */
+.herocontainer > div:last-child {
+    max-width: 600px;
+
+    margin-top: 0.5rem;
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+
+    color: var(--text-muted, #777485);
+}
+
+
 .sideBar{
   display: flex;
   /* 
@@ -408,6 +534,19 @@ header {
         flex: 1;
     }
 
+    .herocontainer {
+        margin: 2rem 1rem 3rem;
+        padding: 3rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .herocontainer > div:first-of-type {
+        font-size: 0.95rem;
+    }
+
+    .herocontainer h1 {
+        font-size: 2.3rem;
+    }
 
     /* =====================
        SIDEBAR
@@ -473,15 +612,17 @@ header {
        FOOTER
        ===================== */
 
-    .footer {
+  .footer {
         width: 100%;
         max-width: none;
+        box-sizing: border-box;
+
+        margin: 0;
+        padding: 1.5rem 5%;
 
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
-        padding: 1.5rem 5%;
 
         gap: 1.2rem;
     }
