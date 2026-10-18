@@ -152,7 +152,7 @@
     min-width: 0;
     padding: 4px 2px 14px;
 
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: hidden;
 
     scroll-behavior: smooth;
@@ -160,7 +160,9 @@
     scrollbar-width: thin;
     scrollbar-color: var(--accent, #A78BFA) var(--surface, #1B1829);
 }
-
+.track::-webkit-scrollbar{
+    display: none;
+}
 /* Keep cards at a consistent width */
 
 .track > * {
