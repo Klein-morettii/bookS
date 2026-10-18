@@ -3,6 +3,8 @@ import Sidebar from './components/sideBar.jsx';
 import Footer from './components/Footer.jsx';
 import SmallCard from './components/CARD/card.jsx';
 import { Link } from 'react-router-dom';
+import Carousel from './components/Carousel/carousel.jsx';
+
 function Home(){
     let logged = false;
 
@@ -41,7 +43,8 @@ function Home(){
                         <Link className='createAccount' to="/signUp"> Create Your Library </Link>
                         <div> We don't host chapters or provide reading content. We help you keep track of it. </div>
                     </div>
-                    <SmallCard/>
+                    
+                    <Carousel carouselType="TRENDING"/>
                     <Footer/>
                 </div>
                 </div>

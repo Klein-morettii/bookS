@@ -3,7 +3,7 @@ import book from '../../assets/bookk.png'
 import page from '../../assets/page.png'
 import bookmark from '../../assets/bookmark.png'
 
-function SmallCard() {
+function SmallCard({book: {type, status, chaps, bookName}}) {
     let completed = true;
     let logged = true;
 
@@ -32,23 +32,21 @@ function SmallCard() {
                             src={book}
                             alt=""
                         />
-                        <span>Novel</span>
+                        <span>{type}</span>
                     </div>
 
-                    <div className="status">
-                        {completed ? "Completed" : "Releasing"}
-                    </div>
+                    <div className="status">{status}</div>
 
                     <div className="chapters">
                         <img src={page} alt="" />
-                        <span>34</span>
+                        <span>{chaps}</span>
                     </div>
 
                 </div>
             </div>
 
             <div className="cardDetail">
-                <div className="title">Lord of the Mysteries</div>
+                <div className="title">{bookName}</div>
             </div>
 
         </div>
