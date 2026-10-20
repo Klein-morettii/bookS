@@ -1,4 +1,4 @@
-import search from '../assets/icons8-search.svg'
+import search from '../../assets/serach.png'
 
 function Search() {
     return(

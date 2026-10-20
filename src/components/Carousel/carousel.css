@@ -19,9 +19,9 @@
 
 /* Each card keeps its own width */
 .track > .container {
-    flex: 0 0 180px;
-    width: 180px;
-    min-width: 180px;
+    flex: 0 0 var(--card-w, 11.25rem);
+    width: var(--card-w, 11.25rem);
+    min-width: var(--card-w, 11.25rem);
     box-sizing: border-box;
     scroll-snap-align: start;
 }
@@ -34,7 +34,9 @@
 
 .Carousel {
     width: 100%;
+    max-width: var(--content-max);
     min-width: 0;
+    margin: 0 auto;
     padding: 7%;
     color: var(--text, #EEEAF8);
 }
@@ -166,7 +168,7 @@
 /* Keep cards at a consistent width */
 
 .track > * {
-    flex: 0 0 180px;
+    flex: 0 0 var(--card-w, 11.25rem);
     min-width: 0;
     scroll-snap-align: start;
 }
@@ -198,7 +200,9 @@
 
 @media (max-width: 768px) {
     .Carousel {
+        --card-w: clamp(8.75rem, 40vw, 10.625rem);
         margin-bottom: 1.5rem;
+        padding: 1.5rem 1rem;
     }
 
     .Header {
@@ -229,9 +233,6 @@
         gap: 12px;
     }
 
-    .track > * {
-        flex-basis: 155px;
-    }
 }
 
 

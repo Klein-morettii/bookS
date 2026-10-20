@@ -1,0 +1,191 @@
+header {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    height: auto;
+    min-height: clamp(3.25rem, 5vh, 5rem);
+    background-color: #1B1829;
+    box-shadow: 0 5px 4px black;
+    padding-left: 2%;
+    padding-right: 2%;
+    flex-shrink: 0;
+}
+.leftH{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2rem;
+  /* text-align: center; */
+}
+.siteName{
+  transition: all 0.5 ease;
+}
+.siteName:hover{
+  color: rgb(124, 90, 202);
+  cursor: pointer;
+}
+.rightH{
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.searchGrp{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.SearchImg{
+  width: clamp(1.875rem, 3vw, 3.125rem);
+  height: auto;
+}
+#search{
+  border-radius: 20px;
+  border: none;
+  width: 30vw;
+  min-width: 15.625rem;
+  max-width: 37.5rem;
+  width: clamp(15.625rem, 30vw, 37.5rem);
+  height: 2em;
+  padding: 10px;
+  font-size: 0.8333rem; /* = the 13.33px browser default, but scales on large monitors */
+}
+#search:hover{
+    box-shadow: 3px 3px 4px black;
+}
+.random {
+  width: clamp(20px, 2.5vw, 40px);
+  height: auto;
+}
+
+.profileSquare {
+    text-decoration: none;
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    background: #7e5ae0;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.profileSquare:hover{
+  transform: scale(1.03);
+  background: var(--accent);
+  box-shadow: 2px 2px 3px black;
+} 
+.profileSquare:active{
+    transform: scale(0.96);
+}
+
+.profileCircle {
+  width: clamp(1.25rem, 3vw, 2.5rem);
+  height: clamp(1.25rem, 3vw, 2.5rem);
+  border-radius: 50%;
+  border: none;
+  background: #ada0fa;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profileCircle:hover{
+  transform: scale(1.03);
+  box-shadow: 2px 2px 3px black;
+} 
+.profileCircle:active{
+    transform: scale(0.97);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Touch screens: 16px+ input text stops iOS from zooming the page on focus */
+@media (pointer: coarse) {
+  #search {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    min-height: 3.75rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    gap: 0.5rem;
+  }
+  .leftH {
+    min-width: 0;
+    flex-shrink: 1;
+    font-size: 1.2rem;
+  }
+  .siteName {
+    white-space: nowrap;
+  }
+  .rightH {
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  .searchGrp {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    justify-content: flex-end;
+  }
+  .SearchImg {
+    width: 1.5rem;
+    flex-shrink: 0;
+  }
+  /* #search (id) is needed here: header.css's #search rule would beat a .search selector */
+  #search {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    max-width: 37.5rem;
+    height: 2em;
+    padding: 8px;
+  }
+  .profileCircle {
+    width: 1.875rem;
+    height: 1.875rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    min-height: 3.4375rem;
+  }
+  .leftH {
+    font-size: 1rem;
+  }
+  .rightH {
+    gap: 0.35rem;
+  }
+  .SearchImg {
+    width: 1.25rem;
+  }
+  #search {
+    height: 1.8em;
+    padding: 6px;
+  }
+  .profileCircle {
+    width: 1.6875rem;
+    height: 1.6875rem;
+  }
+  .profileSquare {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+}

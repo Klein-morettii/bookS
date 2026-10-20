@@ -1,6 +1,6 @@
-import Header from './components/Header.jsx'
-import Sidebar from './components/sideBar.jsx';
-import Footer from './components/Footer.jsx';
+import Header from './components/header/Header.jsx'
+import Sidebar from './components/sidebar/sideBar.jsx';
+import Footer from './components/footer/Footer.jsx';
 import SmallCard from './components/CARD/card.jsx';
 import { Link } from 'react-router-dom';
 import Carousel from './components/Carousel/carousel.jsx';
@@ -42,6 +42,20 @@ function Home(){
                         </div>
                         <Link className='createAccount' to="/signUp"> Create Your Library </Link>
                         <div> We don't host chapters or provide reading content. We help you keep track of it. </div>
+                    </div>
+
+                    <div className='discover'>
+                        <div>Explore By Type: </div>
+                        <div className='grid'>
+                            <div className='grid-card'> NOVEL </div>
+                            <div className='grid-card'> LIGHT NOVEL </div>
+                            <div className='grid-card'> MANGA </div>
+                            <div className='grid-card'> MANHWA </div>
+                            <div className='grid-card'> ANIME </div>
+                            <div className='grid-card'> MOVIES </div>
+                            {/* <div className='grid-card'> GAMES </div>
+                            <div className='grid-card'> MUSIC </div> */}
+                        </div>
                     </div>
                     
                     <Carousel carouselType="TRENDING"/>

@@ -14,7 +14,7 @@
    ========================= */
 
 .SignUpContainer {
-    width: min(560px, 100%);
+    width: min(35rem, 100%);
     padding: 2.5rem 2rem;
     background-color: var(--surface);
     border: 1px solid rgba(167, 139, 250, 0.12);
@@ -278,5 +278,17 @@
 
     .SignUpForm {
         gap: 1.5rem;
+    }
+}
+
+/* =========================
+   TOUCH
+   ========================= */
+
+/* 16px+ input text stops iOS from zooming the page on focus
+   (applies to the sign in form too, it shares .FormGroup) */
+@media (pointer: coarse) {
+    .FormGroup input {
+        font-size: max(16px, 0.9rem);
     }
 }

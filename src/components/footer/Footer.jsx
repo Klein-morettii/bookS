@@ -1,4 +1,5 @@
-import git from '../assets/github-142-svgrepo-com.svg'
+import git from '../../assets/github-142-svgrepo-com.svg'
+import './footer.css'
 
 function Footer(){
 

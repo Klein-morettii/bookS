@@ -1,0 +1,148 @@
+
+.sideBar{
+  display: flex;
+  /* 
+   once site is scrollable
+
+   position: sticky;
+   top: 0;
+   height: calc(100vh - 4.5vh); 
+  */
+  width: clamp(11.25rem, 18vw, 17.5rem);
+  padding-right: 2%;
+  padding-top: 1.5em;
+  flex-direction: column;
+  padding-left: 1.5em;
+  gap: 1.5em;
+  background-color: var(--surface);
+  color: var(--text);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 4px 0 12px black;
+  border-right: 1px solid rgba(167, 139, 250, 0.15); */
+  font-size: 1.5em;
+}
+
+.discover,
+.user,
+.misc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+}
+
+.sideText{
+  padding: 0.45em 0.55em;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.12);
+  color: var(--text);
+  font-size: 0.8em;
+  border-radius: 8px;
+  transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  cursor: pointer;
+}
+.sideText:hover{
+  transform: translateX(5px);
+  color: var(--accent);
+  background-color: var(--card);
+  border-bottom-color: rgba(167, 139, 250, 0.35);
+}
+.sideText:active{
+  transform: translateX(2px) scale(0.98);
+}
+
+.sideHeading{
+  margin: 0 0 0.4em 0;
+
+    padding: 0 5px;
+
+    color: var(--muted);
+
+    font-size: 0.65em;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Narrow desktop / tablet landscape: a touch smaller so
+   labels like LIGHT NOVELS don't wrap inside the 180px bar */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .sideBar {
+    font-size: 1.1em;
+    padding-left: 1em;
+  }
+}
+
+/* Phones (and short landscape phones): sidebar becomes a scrollable strip under the header */
+@media (max-width: 768px), (max-height: 480px) and (orientation: landscape) {
+  .sideBar {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 1rem;
+    padding: 0.5rem 3%;
+    font-size: 1rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(167, 139, 250, 0.4) transparent;
+
+    box-shadow: none;
+    border-bottom: 1px solid rgba(167, 139, 250, 0.15);
+  }
+
+  .sideBar .discover,
+  .sideBar .user,
+  .sideBar .misc {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.3rem;
+  }
+
+  .sideBar .sideHeading {
+    display: none;
+  }
+
+  .sideBar .sideText {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 0.55rem 0.7rem;
+    font-size: 0.875rem;
+    border-bottom: none;
+  }
+
+  .sideBar .sideText:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .sideBar {
+    gap: 0.6rem;
+  }
+
+  .sideBar .sideText {
+    padding: 0.5rem 0.55rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* Touch: no visible scrollbar on the strip, swipe instead */
+@media (pointer: coarse) {
+  .sideBar {
+    scrollbar-width: none;
+  }
+  .sideBar::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -16,6 +16,14 @@ function Carousel({carouselType}){
         { id: 8, bookName: "Percy Jackson and the Battle of the Laybrinth", type: "Novel", status: "Completed", chaps: 19 },
         { id: 9, bookName: "Hobbit", type: "Novel", status: "Completed", chaps: 20 },
         { id: 10, bookName: "Lord of Chaos", type: "Novel", status: "Completed", chaps: 56 },
+        { id: 11, bookName: "One Piece", type: "Manga", status: "On Going", chaps: 1250 },
+        { id: 11, bookName: "One Piece", type: "Manga", status: "On Going", chaps: 1250 },
+        { id: 12, bookName: "Monster", type: "Manga", status: "Completed", chaps: 280 },
+        { id: 13, bookName: "Kingdom", type: "Manga", status: "On Going", chaps: 820 },
+        { id: 14, bookName: "20'th Centuary Boys", type: "Manga", status: "Finished", chaps: 350 },
+        { id: 15, bookName: "Claymore", type: "Manga", status: "Completed", chaps: 159 },
+        { id: 16, bookName: "Attack On Titan", type: "Manga", status: "Completed", chaps: 141 },
+        { id: 17, bookName: "FullMetal Alchemist", type: "Manga", status: "Completed", chaps: 158 },
     ]
 
     const list = books.map((book) => (

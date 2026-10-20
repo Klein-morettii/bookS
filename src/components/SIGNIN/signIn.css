@@ -6,9 +6,9 @@
     gap: 0.1em;
 }
 .LoginContainer {
-    width: clamp(280px, 90vw, 560px);
+    width: min(35rem, 100%);
     margin: 60px auto;
-    padding: 40px 32px;
+    padding: 2.5rem 2rem;
     box-sizing: border-box;
     background: #1B1829;
     border-radius: 12px;
@@ -26,13 +26,13 @@ a{
 }
 
 .LoginTitle {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 8px;
 }
 
 .LoginSubtitle {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #EEEAF8;
 }
 
@@ -76,7 +76,7 @@ a{
     border-radius: 6px;
     background: #7e5ae0;
     color: #EEEAF8;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.15s ease;

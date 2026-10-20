@@ -2,6 +2,23 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Large monitors: everything sized in rem/em scales together,
+   so the layout keeps its proportions instead of looking tiny */
+@media (min-width: 1920px) {
+  html { font-size: 112.5%; }
+}
+@media (min-width: 2560px) {
+  html { font-size: 125%; }
+}
+@media (min-width: 3840px) {
+  html { font-size: 150%; }
+}
+
 html,
 body,
 #root {
@@ -14,8 +31,10 @@ body,
 }
 #root {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
+    --content-max: 110rem;
     --background: #11101C;
     --surface: #1B1829;
     --card: #242039;
@@ -23,112 +42,11 @@ body,
     --muted: #A9A3BA;
     --accent: #A78BFA;
 }
-header {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    justify-content: space-between;
-    height: 5vh;
-    background-color: #1B1829;
-    box-shadow: 0 5px 4px black;
-    padding-left: 2%;
-    padding-right: 2%;
-    flex-shrink: 0;
-}
-.leftH{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 2rem;
-  /* text-align: center; */
-}
-.siteName{
-  transition: all 0.5 ease;
-}
-.siteName:hover{
-  color: rgb(124, 90, 202);
-  cursor: pointer;
-}
-.rightH{
-  display: flex;
-  align-items: center;
-  gap: 2em;
-}
-.searchGrp{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.SearchImg{
-  width: clamp(30px, 3vw, 50px);
-  height: auto;
-}
-#search{
-  border-radius: 20px;
-  border: none;
-  width: 30vw;
-  min-width: 250px;
-  max-width: 600px;
-  width: clamp(250px, 30vw, 600px);
-  height: 2em;
-  padding: 10px;
-}
-#search:hover{
-    box-shadow: 3px 3px 4px black;
-}
-.random {
-  width: clamp(20px, 2.5vw, 40px);
-  height: auto;
-}
-
-.profileSquare {
-    text-decoration: none;
-    color: var(--text);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 16px;
-    border-radius: 6px;
-    border: none;
-    background: #7e5ae0;
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-}
-.profileSquare:hover{
-  transform: scale(1.03);
-  background: var(--accent);
-  box-shadow: 2px 2px 3px black;
-} 
-.profileSquare:active{
-    transform: scale(0.96);
-}
-
-.profileCircle {
-  width: clamp(20px, 3vw, 40px);
-  height: clamp(20px, 3vw, 40px);
-  border-radius: 50%;
-  border: none;
-  background: #ada0fa;
-  cursor: pointer;
-  overflow: hidden;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.profileCircle:hover{
-  transform: scale(1.03);
-  box-shadow: 2px 2px 3px black;
-} 
-.profileCircle:active{
-    transform: scale(0.97);
-}
 
 /* middle */
 .app{
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -149,7 +67,7 @@ header {
 
 
 .herocontainer {
-    width: min(100%, 1000px);
+    width: min(calc(100% - 2rem), 62.5rem);
     margin: 3rem auto 4rem;
     padding: 3rem 5rem;
 
@@ -273,269 +191,175 @@ header {
 }
 
 
-.sideBar{
-  display: flex;
-  /* 
-   once site is scrollable
-
-   position: sticky;
-   top: 0;
-   height: calc(100vh - 4.5vh); 
-  */
-  width: clamp(180px, 18vw, 280px);
-  padding-right: 2%;
-  padding-top: 1.5em;
-  flex-direction: column;
-  padding-left: 1.5em;
-  gap: 1.5em;
-  background-color: var(--surface);
-  color: var(--text);
-  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
-  /* box-shadow: 4px 0 12px black;
-  border-right: 1px solid rgba(167, 139, 250, 0.15); */
-  font-size: 1.5em;
-}
-
-.discover,
-.user,
-.misc {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35em;
-}
-
-.sideText{
-  padding: 0.45em 0.55em;
-  border-bottom: 1px solid rgba(167, 139, 250, 0.12);
-  color: var(--text);
-  font-size: 0.8em;
-  border-radius: 8px;
-  transition:
-      background-color 0.2s ease,
-      color 0.2s ease,
-      transform 0.2s ease,
-      border-color 0.2s ease;
-  cursor: pointer;
-}
-.sideText:hover{
-  transform: translateX(5px);
-  color: var(--accent);
-  background-color: var(--card);
-  border-bottom-color: rgba(167, 139, 250, 0.35);
-}
-.sideText:active{
-  transform: translateX(2px) scale(0.98);
-}
-
-.sideHeading{
-  margin: 0 0 0.4em 0;
-
-    padding: 0 5px;
-
-    color: var(--muted);
-
-    font-size: 0.65em;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-}
-
-
-/* footer */
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+.main .discover {
     width: 100%;
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 1.75rem 1.5rem;
+    box-sizing: border-box;
+    color: var(--text);
+}
+
+/* Section heading */
+.discover > div:first-child {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 18px;
+    color: var(--text);
+}
+
+/* Responsive card grid */
+.discover .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5625rem;
+    width: 100%;
+}
+
+/* Individual category cards */
+.discover .grid-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    min-width: 0;
+    min-height: 9.375rem;
+    aspect-ratio: 4 / 1;
+    padding: 1.125rem;
     box-sizing: border-box;
 
-    padding: 2rem 3% 1.2rem;
+    overflow: hidden;
+    border: 1px solid rgba(167, 139, 250, 0.15);
+    border-radius: 12px;
 
-    background-color: var(--surface);
+    background: linear-gradient(
+        135deg,
+        var(--card),
+        var(--surface)
+    );
+
     color: var(--text);
+    font-size: 1rem;
+    font-weight: 750;
+    letter-spacing: 0.8px;
 
-    border-top: 1px solid rgba(167, 139, 250, 0.15);
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
-
-    gap: 3rem;
-}
-.footerBrand {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
-    max-width: 400px;
-}
-.footerBrand h3 {
-    margin: 0;
-
-    color: var(--accent);
-    font-size: 1.2rem;
-    letter-spacing: 0.08em;
-}
-.footerBrand div {
-    color: var(--muted);
-    font-size: 0.85rem;
-    line-height: 1.5;
-}
-.footerLinks {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-.footerLinks a {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-
-    color: var(--muted);
-    text-decoration: none;
-
-    font-size: 0.85rem;
+    cursor: pointer;
+    isolation: isolate;
 
     transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-.footerLinks a:hover {
-    color: var(--accent);
-    transform: translateY(-2px);
+/* Subtle accent glow */
+.discover .grid-card::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    right: -35px;
+    top: -45px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.07;
+    filter: blur(35px);
+    z-index: -1;
+    transition: opacity 0.25s ease;
 }
-.gitImg {
-    width: 20px;
-    height: 20px;
+
+/* Bottom shading for readable text */
+.discover .grid-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(10, 8, 20, 0.35),
+        transparent 70%
+    );
+    z-index: -1;
+    pointer-events: none;
 }
-.footerCopy {
-    color: var(--muted);
-    font-size: 0.75rem;
-    white-space: nowrap;
+
+/* Hover effect */
+.discover .grid-card:hover {
+    border-color: var(--accent);
+    background: linear-gradient(
+        135deg,
+        #2c2545,
+        var(--card)
+    );
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
+.discover .grid-card:hover::before {
+    opacity: 0.2;
+}
 
+/* Tablet: 2 columns */
+@media (max-width: 1000px) {
+    .discover .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
+    .main .discover {
+        padding: 1.5rem 1.25rem;
+    }
+}
 
+/* Mobile: 1 column */
+@media (max-width: 560px) {
+    .main .discover {
+        padding: 1.25rem 1rem;
+    }
 
+    .discover .grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
 
+    .discover .grid-card {
+        min-height: 120px;
+        aspect-ratio: 2.5 / 1;
+        padding: 16px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .discover > div:first-child {
+        font-size: 1.05rem;
+        margin-bottom: 14px;
+    }
+}
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE (layout + hero)
+
+   Header, sidebar, footer and cards keep their responsive rules in their
+   own css files, right after their base rules. Component css loads after
+   this file, so rules written here for them lose the cascade.
    ========================= */
 
-@media (max-width: 768px) {
-
-    /* =====================
-       HEADER
-       ===================== */
-
-    header {
-        height: 60px;
-        min-height: 60px;
-        padding: 0 3%;
-        gap: 0.5rem;
-    }
-
-    .leftH {
-        min-width: 0;
-        flex-shrink: 1;
-        font-size: 1.2rem;
-    }
-
-    .siteName {
-        white-space: nowrap;
-    }
-
-    .rightH {
-        flex: 1;
-        min-width: 0;
-        justify-content: flex-end;
-        gap: 0.5rem;
-    }
-
-
-    /* Search */
-
-    .searchGrp {
-        flex: 1;
-        min-width: 0;
-        width: auto;
-    }
-
-    .SearchImg {
-        width: 24px;
-        flex-shrink: 0;
-    }
-
-    .search {
-        width: 100%;
-        min-width: 0;
-        max-width: none;
-        height: 2em;
-        padding: 8px;
-    }
-
-
-    /* Dice */
-
-    .random {
-        width: 22px;
-        height: 22px;
-        flex-shrink: 0;
-    }
-
-
-    /* Profile */
-
-    .profile {
-        width: 30px;
-        height: 30px;
-        flex-shrink: 0;
-    }
-
-
-    /* =====================
-       MAIN LAYOUT
-       ===================== */
-
+/* Sidebar turns into a strip under the header on phones
+   and on short landscape phones */
+@media (max-width: 768px), (max-height: 480px) and (orientation: landscape) {
     .middle {
-        width: 100%;
-        min-width: 0;
-        display: flex;
         flex-direction: column;
-        padding: 0;
     }
+}
 
-    .main {
-        width: 100%;
-        min-width: 0;
-        flex: 1;
-    }
-
+@media (max-width: 1024px) {
     .herocontainer {
-        margin: 2rem 1rem 3rem;
+        padding: 3rem 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .herocontainer {
+        width: calc(100% - 2rem);
+        margin: 2rem auto 3rem;
         padding: 3rem 1.5rem;
         border-radius: 16px;
     }
@@ -543,168 +367,10 @@ header {
     .herocontainer > div:first-of-type {
         font-size: 0.95rem;
     }
-
-    .herocontainer h1 {
-        font-size: 2.3rem;
-    }
-
-    /* =====================
-       SIDEBAR
-       ===================== */
-
-    .sideBar {
-        width: 100%;
-        min-width: 0;
-        max-width: none;
-
-        display: flex;
-        flex-direction: row;
-
-        padding: 0.5rem 3%;
-
-        gap: 1rem;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        box-sizing: border-box;
-        flex-shrink: 0;
-
-        font-size: 0.85rem;
-
-        box-shadow: none;
-        border-right: none;
-        border-bottom: 1px solid rgba(167, 139, 250, 0.15);
-    }
-
-    .discover,
-    .user,
-    .misc {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        flex-shrink: 0;
-
-        gap: 0.3rem;
-    }
-
-    .sideHeading {
-        display: none;
-    }
-
-    .sideText {
-        white-space: nowrap;
-        flex-shrink: 0;
-
-        padding: 0.45rem 0.6rem;
-
-        border-bottom: none;
-        margin: 0;
-    }
-
-    .sideText:hover {
-        transform: none;
-    }
-
-
-    /* =====================
-       FOOTER
-       ===================== */
-
-  .footer {
-        width: 100%;
-        max-width: none;
-        box-sizing: border-box;
-
-        margin: 0;
-        padding: 1.5rem 5%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        gap: 1.2rem;
-    }
-
-    .footerBrand {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .footerLinks {
-        flex-wrap: wrap;
-        gap: 0.8rem;
-    }
-
-    .footerCopy {
-        white-space: normal;
-    }
 }
 
-
-/* =========================
-   SMALL PHONES
-   ========================= */
-
 @media (max-width: 480px) {
-
-    header {
-        height: 55px;
-        min-height: 55px;
-        padding: 0 3%;
-    }
-
-    .leftH {
-        font-size: 1rem;
-    }
-
-    .rightH {
-        gap: 0.35rem;
-    }
-
-    .SearchImg {
-        width: 20px;
-    }
-
-    .search {
-        height: 1.8em;
-        padding: 6px;
-        font-size: 0.75rem;
-    }
-
-    .random {
-        width: 19px;
-        height: 19px;
-    }
-
-    .profile {
-        width: 27px;
-        height: 27px;
-    }
-
-    .sideBar {
-        font-size: 0.8rem;
-        gap: 0.6rem;
-    }
-
-    .sideText {
-        padding: 0.4rem 0.5rem;
-    }
-
-    .footer {
-        padding: 1.5rem 5%;
-    }
-
-    .footerBrand h3 {
-        font-size: 1rem;
-    }
-
-    .footerBrand div {
-        font-size: 0.75rem;
-    }
-
-    .footerLinks a {
-        font-size: 0.75rem;
+    .herocontainer {
+        padding: 2.25rem 1.1rem;
     }
 }

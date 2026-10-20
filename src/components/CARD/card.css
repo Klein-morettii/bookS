@@ -13,9 +13,9 @@
 /* SmallCard: outer card */
 .container {
     box-sizing: border-box;
-    width: 180px;
-    min-width: 180px;
-    flex: 0 0 180px;
+    width: var(--card-w, 11.25rem);
+    min-width: var(--card-w, 11.25rem);
+    flex: 0 0 var(--card-w, 11.25rem);
 
     overflow: hidden;
     border-radius: 12px;
@@ -44,7 +44,7 @@
     display: block;
     width: 100%;
     min-width: 0;
-    padding: 10px;
+    padding: 0.625rem;
     box-sizing: border-box;
 }
 
@@ -59,7 +59,7 @@
     overflow-wrap: anywhere;
 
     color: var(--text, #EEEAF8);
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
     line-height: 1.5;
 }
@@ -111,13 +111,13 @@
 /* Bookmark */
 .mark {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.625rem;
+    right: 0.625rem;
 
-    width: 34px;
-    height: 34px;
+    width: 2.125rem;
+    height: 2.125rem;
 
-    padding: 7px;
+    padding: 0.4375rem;
 
     display: flex;
     align-items: center;
@@ -179,12 +179,12 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 8px 10px;
+    padding: 0.5rem 0.625rem;
 
     background: rgba(0, 0, 0, 0.75);
     color: white;
 
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .mediaType,
@@ -196,8 +196,8 @@
 
 .typeOfMedia,
 .chapters img {
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     object-fit: contain;
 }
 
@@ -220,3 +220,33 @@
     overflow: hidden;
     text-overflow: ellipsis;
 } */
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Touch screens have no hover, so keep the bookmark button reachable */
+@media (hover: none) {
+    .mark {
+        opacity: 1;
+        transform: none;
+    }
+
+    .container:hover {
+        transform: none;
+    }
+}
+
+/* Smaller cards on phones: the status drops to its own line
+   instead of being squeezed between the type and chapter count */
+@media (max-width: 768px) {
+    .dataOnXAxis {
+        flex-wrap: wrap;
+        row-gap: 2px;
+    }
+
+    .status {
+        order: 3;
+        flex-basis: 100%;
+    }
+}
