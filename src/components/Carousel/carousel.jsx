@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom"
+
 import SmallCard from "../CARD/Card"
-import './carousel.css'
 import left from '../../assets/arrow-left.png'
 import right from '../../assets/arrow-right.png'
+
+import './carousel.css'
 
 function Carousel({carouselType}){
     const books = [

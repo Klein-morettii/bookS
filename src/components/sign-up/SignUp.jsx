@@ -1,6 +1,6 @@
-import './signUp.css'
 import { Link } from "react-router-dom";
 
+import './signUp.css'
 function SignUp() {
     return (
         <div className="cen">

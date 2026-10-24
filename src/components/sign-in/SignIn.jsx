@@ -1,6 +1,6 @@
-import './signIn.css'
 import { Link } from "react-router-dom";
 
+import './signIn.css'
 function SignIn(){
     return(
         <div className='cen'>

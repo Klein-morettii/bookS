@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "./Home.jsx"; 
-import SignIn from "./components/SIGNIN/SignIn.jsx";
-import SignUp from "./components/SIGNUP/SignUp.jsx";
-import Layout from "./components/pageLayout.jsx/layout.jsx";
+import SignIn from "./components/sign-in/SignIn.jsx";
+import SignUp from "./components/sign-up/SignUp.jsx";
+import Layout from "./components/pageLayout/layout.jsx";
 
 function RouteNavigation () {
     return(

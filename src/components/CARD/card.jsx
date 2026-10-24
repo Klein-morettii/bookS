@@ -1,7 +1,8 @@
-import './card.css'
 import book from '../../assets/bookk.png'
 import page from '../../assets/page.png'
 import bookmark from '../../assets/bookmark.png'
+
+import './card.css'
 
 function SmallCard({book: {type, status, chaps, bookName}}) {
     let completed = true;
