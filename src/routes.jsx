@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import Home from "./Home.jsx"; 
 import SignIn from "./components/SIGNIN/SignIn.jsx";
 import SignUp from "./components/SIGNUP/SignUp.jsx";
+import Layout from "./components/pageLayout.jsx/layout.jsx";
 
 function RouteNavigation () {
     return(
@@ -9,6 +10,12 @@ function RouteNavigation () {
             <Route path="/" element={<Home />}/>
             <Route path="/signIn" element={<SignIn/>}/>
             <Route path="/signUp" element={<SignUp/>}/>
+            <Route path="/novel" element={<Layout/>}/>
+            <Route path="/lightNovel" element={<Layout/>}/>
+            <Route path="/manga" element={<Layout/>}/>
+            <Route path="/manhwa" element={<Layout/>}/>
+            <Route path="/anime" element={<Layout/>}/>
+            <Route path="/movies" element={<Layout/>}/>
         </Routes> 
     );
 }

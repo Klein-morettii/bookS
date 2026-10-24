@@ -7,13 +7,15 @@ function Sidebar(){
         <div className="sideBar">
             <div className="discover">
                 <h3 className="sideHeading">DISCOVER</h3>
-                <Link to='/' className="sideText" href="">HOME</Link>
-                <Link to='/novel' className="sideText" href="">NOVELS</Link>
-                <Link to='/lightNovel' className="sideText" href="">LIGHT NOVELS</Link>
-                <Link to='/mangas' className="sideText" href="">MANGAS</Link>
-                <Link to='/manhwas' className="sideText" href="">MANHWAS</Link>
-                <Link to='/ranking' className="sideText" href="">RANKING</Link>
-                <Link to='/browse' className="sideText" href="">BROWSE</Link>
+                <Link to='/' className="sideText" >HOME</Link>
+                <Link to='/novel' className="sideText">NOVELS</Link>
+                <Link to='/lightNovel' className="sideText">LIGHT NOVELS</Link>
+                <Link to='/manga' className="sideText">MANGAS</Link>
+                <Link to='/manhwa' className="sideText">MANHWAS</Link>
+                <Link to='/anime' className="sideText">ANIMES</Link>
+                <Link to='/movies' className="sideText">MOVIES</Link>
+                <Link to='/ranking' className="sideText">RANKING</Link>
+                <Link to='/browse' className="sideText">BROWSE</Link>
             </div>
 
             <div className="user">
