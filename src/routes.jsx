@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import Home from "./home.jsx"; 
 import SignIn from "./components/sign-in/SignIn.jsx";
 import SignUp from "./components/sign-up/SignUp.jsx";
-import Layout from "./components/pageLayout/layout.jsx";
+import Layout from "./components/pageLayout/Layout.jsx";
 
 function RouteNavigation () {
     return(
