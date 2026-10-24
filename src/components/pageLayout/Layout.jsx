@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import Carousel from "../Carousel/Carousel.jsx";
+import Carousel from "../carousel/Carousel.jsx";
 import Header from '../header/Header.jsx'
 import Sidebar from "../sidebar/SideBar.jsx";
 import Footer from "../footer/Footer.jsx";

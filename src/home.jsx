@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import Header from './components/header/Header.jsx'
 import Sidebar from './components/sidebar/SideBar.jsx';
 import Footer from './components/footer/Footer.jsx';
-import SmallCard from './components/CARD/Card.jsx';
-import Carousel from './components/Carousel/Carousel.jsx';
+import SmallCard from "./components/card/Card.jsx";
+import Carousel from './components/carousel/Carousel.jsx';
 
 import novelP from './assets/novelphoto1.png';
 import lightnovel from './assets/lightnovel.webp'
