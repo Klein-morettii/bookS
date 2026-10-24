@@ -35,6 +35,7 @@ body,
     display: flex;
     flex-direction: column;
     --content-max: 110rem;
+    --header-h: clamp(3.25rem, 5vh, 5rem); /* header height; the sidebar sticks right below it */
     --background: #11101C;
     --surface: #1B1829;
     --card: #242039;
@@ -49,6 +50,7 @@ body,
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0; /* #root is height:100%, without this .app gets squeezed to one screen and the sticky header can't follow the scroll */
 }
 .middle{
   display: flex;
@@ -372,5 +374,18 @@ body,
 @media (max-width: 480px) {
     .herocontainer {
         padding: 2.25rem 1.1rem;
+    }
+}
+
+/* Header height on phones (the sidebar strip sticks right below it) */
+@media (max-width: 768px) {
+    #root {
+        --header-h: 3.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #root {
+        --header-h: 3.4375rem;
     }
 }

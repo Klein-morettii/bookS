@@ -12,9 +12,6 @@ function Sidebar(){
                 <Link to='/lightNovel' className="sideText" href="">LIGHT NOVELS</Link>
                 <Link to='/mangas' className="sideText" href="">MANGAS</Link>
                 <Link to='/manhwas' className="sideText" href="">MANHWAS</Link>
-                <Link to='/manhwas' className="sideText" href="">GAMES</Link>
-                <Link to='/manhwas' className="sideText" href="">MANHWAS</Link>
-                <Link to='/manhwas' className="sideText" href="">MANHWAS</Link>
                 <Link to='/ranking' className="sideText" href="">RANKING</Link>
                 <Link to='/browse' className="sideText" href="">BROWSE</Link>
             </div>

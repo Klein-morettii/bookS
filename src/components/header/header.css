@@ -3,8 +3,10 @@ header {
     width: 100%;
     box-sizing: border-box;
     justify-content: space-between;
-    height: auto;
-    min-height: clamp(3.25rem, 5vh, 5rem);
+    height: var(--header-h, 3.25rem);
+    position: sticky;
+    top: 0;
+    z-index: 100;
     background-color: #1B1829;
     box-shadow: 0 5px 4px black;
     padding-left: 2%;
@@ -118,7 +120,6 @@ header {
 
 @media (max-width: 768px) {
   header {
-    min-height: 3.75rem;
     padding-left: 3%;
     padding-right: 3%;
     gap: 0.5rem;
@@ -164,9 +165,6 @@ header {
 }
 
 @media (max-width: 480px) {
-  header {
-    min-height: 3.4375rem;
-  }
   .leftH {
     font-size: 1rem;
   }

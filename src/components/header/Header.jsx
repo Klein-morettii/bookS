@@ -1,5 +1,5 @@
 import random from '../../assets/dice-solid-full.svg';
-import Search from '../searchbar/searchBar';
+import Search from '../searchbar/SearchBar';
 import { Link } from "react-router-dom";
 import './header.css'
 

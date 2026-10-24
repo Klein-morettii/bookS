@@ -1,9 +1,9 @@
 import Header from './components/header/Header.jsx'
-import Sidebar from './components/sidebar/sideBar.jsx';
+import Sidebar from './components/sidebar/SideBar.jsx';
 import Footer from './components/footer/Footer.jsx';
-import SmallCard from './components/CARD/card.jsx';
+import SmallCard from './components/CARD/Card.jsx';
 import { Link } from 'react-router-dom';
-import Carousel from './components/Carousel/carousel.jsx';
+import Carousel from './components/Carousel/Carousel.jsx';
 
 function Home(){
     let logged = false;
@@ -59,6 +59,17 @@ function Home(){
                     </div>
                     
                     <Carousel carouselType="TRENDING"/>
+                    <Carousel carouselType="ggg"/>
+                    {/* <Carousel carouselType="TRENDING"/>
+                    <Carousel carouselType="TRENDING"/>
+                    <Carousel carouselType="TRENDING"/>
+                    <Carousel carouselType="TRENDING"/>
+                    <Carousel carouselType="TRENDING"/>
+                    <Carousel carouselType="TRENDING"/>
+                    <Carousel carouselType="TRENDING"/>
+                    <Carousel carouselType="TRENDING"/>
+                    <Carousel carouselType="TRENDING"/>
+                    <Carousel carouselType="TRENDING"/> */}
                     <Footer/>
                 </div>
                 </div>

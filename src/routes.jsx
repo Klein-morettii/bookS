@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
-import Home from "./home.jsx"; 
+import Home from "./Home.jsx"; 
 import SignIn from "./components/SIGNIN/SignIn.jsx";
-import SignUp from "./components/SIGNUP/signUp.jsx";
+import SignUp from "./components/SIGNUP/SignUp.jsx";
 
 function RouteNavigation () {
     return(
