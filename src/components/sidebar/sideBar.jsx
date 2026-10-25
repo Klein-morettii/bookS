@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import './sidebar.css'
 
-function Sidebar(){
+function SideBar(){
 
     return(
         <div className="sideBar">
@@ -37,4 +37,4 @@ function Sidebar(){
     );
 }
 
-export default Sidebar;
+export default SideBar;

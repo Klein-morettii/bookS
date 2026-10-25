@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 import Carousel from '../../components/carousel/Carousel.jsx';
-
 import novelP from '../../assets/novelphoto1.png';
 import lightnovel from '../../assets/lightnovel.webp'
 import manga from '../../assets/manga.webp'
