@@ -1,24 +1,107 @@
-import { Route, Routes } from "react-router-dom"
+import { createBrowserRouter } from "react-router-dom";
 
-import Home from "./home.jsx"; 
+import PageLayout from './components/pageLayout/PageLayout.jsx'
+import Home from "./pages/home/home.jsx";
 import SignIn from "./components/sign-in/SignIn.jsx";
 import SignUp from "./components/sign-up/SignUp.jsx";
-import Layout from "./components/pageLayout/Layout.jsx";
+import Anime from "./pages/anime/Anime.jsx";
+import LightNovel from "./pages/lightNovel/LightNovel.jsx";
+import Manga from "./pages/manga/Manga.jsx";
+import Manhwa from "./pages/manhwa/Manhwa.jsx";
+import Movie from "./pages/movies/Movie.jsx";
+import Novel from "./pages/novel/Novel.jsx";
+import UnderConstruction from "./pages/ranking/ranking.jsx";
 
-function RouteNavigation () {
-    return(
-        <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/signIn" element={<SignIn/>}/>
-            <Route path="/signUp" element={<SignUp/>}/>
-            <Route path="/novel" element={<Layout/>}/>
-            <Route path="/lightNovel" element={<Layout/>}/>
-            <Route path="/manga" element={<Layout/>}/>
-            <Route path="/manhwa" element={<Layout/>}/>
-            <Route path="/anime" element={<Layout/>}/>
-            <Route path="/movies" element={<Layout/>}/>
-        </Routes> 
-    );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <PageLayout />,
+      children: [
+        {
+          path: "/",
+          element: <Home/>,
+        },
+        {
+          path: "/anime",
+          element: <Anime/>,
+        },
+        {
+          path: "/lightNovel",
+          element: <LightNovel/>,
+        },
+        {
+          path: "/manga",
+          element: <Manga/>,
+        },
+        {
+          path: "/manhwa",
+          element: <Manhwa/>,
+        },
+        {
+          path: "/movie",
+          element: <Movie/>,
+        },
+        {
+          path: "/novel",
+          element: <Novel/>,
+        },
+        {
+          path: "/ranking",
+          element: <UnderConstruction/>
+        },
+        {
+          path: "/profile",
+          element: <UnderConstruction/>,
+        },
+        {
+          path: "/library",
+          element: <UnderConstruction/>,
+        },
+        {
+          path: "/setting",
+          element: <UnderConstruction/>,
+        },
+        {
+          path: "/contactUs",
+          element: <UnderConstruction/>,
+        },
+      ]
+    },
+
+    {
+      path: "/signIn",
+      element: <SignIn/>,
+    },
+    {
+      path: "/signUp",
+      element: <SignUp/>,
+    },
+    
+  ],
+
+  {
+    basename: "/bookS/",
+  }
+)
+
+
+export default router
+
+
+
+
+/* below is the way to use the basic browser router  */
+
+/* import {BrowserRouter} from 'react-router-dom'
+import RouteNavigation from './routes'
+
+function App() {
+  return(  
+    <BrowserRouter basename='/bookS/'>
+      <RouteNavigation/>
+    </BrowserRouter>
+  );
 }
 
-export default RouteNavigation
+export default App
+ */

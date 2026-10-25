@@ -1,12 +1,11 @@
-import {BrowserRouter} from 'react-router-dom'
-import RouteNavigation from './routes'
+import { RouterProvider } from "react-router-dom";
+
+import router from "./routes.jsx";
 
 function App() {
-  return(  
-    <BrowserRouter basename='/bookS/'>
-      <RouteNavigation/>
-    </BrowserRouter>
-  );
+  return (
+    <RouterProvider router={router} />
+  )
 }
 
 export default App

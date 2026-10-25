@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
-import Carousel from "../carousel/Carousel.jsx";
 import Header from '../header/Header.jsx'
 import Sidebar from "../sidebar/SideBar.jsx";
 import Footer from "../footer/Footer.jsx";
@@ -8,7 +7,7 @@ import Footer from "../footer/Footer.jsx";
 import './layout.css'
 
 
-function Layout(){
+function PageLayout(){
 
     return (
         <>
@@ -18,7 +17,8 @@ function Layout(){
                 <Sidebar/>
         
                 <div className='main'>
-                    <Carousel carouselType="TRENDING"/>
+
+                    <Outlet />
 
                     <Footer/>
                 </div>
@@ -28,4 +28,4 @@ function Layout(){
     )
 }
 
-export default Layout
+export default PageLayout
