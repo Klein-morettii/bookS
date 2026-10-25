@@ -1,4 +1,4 @@
-import Carousel from "../../components/carousel/Carousel";
+import Carousel from "../../components/carousel/Carousel.jsx";
 
 function Manhwa(){
     return(

@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 
 import Header from '../header/Header.jsx'
-import Sidebar from "../sidebar/SideBar.jsx";
+import SideBar from "../sidebar/SideBar.jsx";
 import Footer from "../footer/Footer.jsx";
 
 import './layout.css'
@@ -14,7 +14,7 @@ function PageLayout(){
             <Header/>
 
             <div className='middle'>
-                <Sidebar/>
+                <SideBar/>
         
                 <div className='main'>
 
