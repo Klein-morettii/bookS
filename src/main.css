@@ -265,7 +265,8 @@ body,
 .imgT {
     position: absolute;
     left: 1rem;
-    color: white;
+    padding: 5px;
+    color: hsl(0, 0%, 100%);
     font-size: 1.5rem;
 }
 /* Subtle accent glow */

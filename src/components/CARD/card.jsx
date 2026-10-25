@@ -1,4 +1,5 @@
-import book from '../../assets/bookk.png'
+import { Link } from 'react-router-dom'
+import bookType from '../../assets/bookk.png'
 import page from '../../assets/page.png'
 import bookmark from '../../assets/bookmark.png'
 import complete from '../../assets/complete.png'
@@ -88,7 +89,7 @@ function SmallCard({book}) {
 
     return (
         <>
-            <div className="container">
+            <Link to="/bookDetail" className="container">
 
                 <div className="cardImg">
 
@@ -109,7 +110,7 @@ function SmallCard({book}) {
                         <div className="mediaType">
                             <img
                                 className="typeOfMedia"
-                                src={book}
+                                src={bookType}
                                 alt=""
                             />
                             <span>{type}</span>
@@ -129,7 +130,7 @@ function SmallCard({book}) {
                     <div className="title">{bookName}</div>
                 </div>
 
-            </div>
+            </Link>
         </>
     );
 }

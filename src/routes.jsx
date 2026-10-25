@@ -11,6 +11,7 @@ import Manhwa from "./pages/manhwa/Manhwa.jsx";
 import Movie from "./pages/movies/Movie.jsx";
 import Novel from "./pages/novel/Novel.jsx";
 import UnderConstruction from "./pages/ranking/ranking.jsx";
+import BookDetail from "./pages/bookDetail/BookDetail.jsx";
 
   const router = createBrowserRouter([
     {
@@ -64,6 +65,10 @@ import UnderConstruction from "./pages/ranking/ranking.jsx";
         {
           path: "/contactUs",
           element: <UnderConstruction/>,
+        },
+        {
+          path: "/bookDetail",
+          element: <BookDetail/>,
         },
       ]
     },

@@ -28,29 +28,34 @@ function Home(){
                     <div>Explore By Type: </div>
                     <div className='grid'>
 
-                        <Link className='grid-card' to="/signIn">
+                        <Link className='grid-card' to="/novel">
                             <img className='imgD' src= {novelP} alt="novel" />
-                            {/* <div className='imgT'>NOVELS</div> */}
+                            <div className='imgT'>NOVELS</div>
                         </Link>
 
-                        <Link className='grid-card' to="">
+                        <Link className='grid-card' to="/lightNovel">
                             <img className='imgD' src={lightnovel} alt="lightnovel" />
+                            <div className='imgT'>LIGHT NOVELS</div>
                         </Link>
 
-                        <Link className='grid-card' to=""> 
+                        <Link className='grid-card' to="/manga"> 
                             <img className='imgD' src={manga} alt="Manga" />
+                            <div className='imgT'>MANGAS</div>
                         </Link>
 
-                        <Link className='grid-card' to=""> 
+                        <Link className='grid-card' to="/manhwa"> 
                             <img className='imgD' src={manhwa} alt="Manhwa" />
+                            <div className='imgT'>MANHWAS</div>
                         </Link>
 
-                        <Link className='grid-card' to=""> 
+                        <Link className='grid-card' to="/anime"> 
                             <img className='imgD' src={anime} alt="Anime" />
+                            <div className='imgT'>ANIMES</div>
                         </Link>
 
-                        <Link className='grid-card' to=""> 
+                        <Link className='grid-card' to="/movie"> 
                             <img className='imgD' src={movie} alt="Movies" />
+                            <div className='imgT'>MOVIES</div>
                         </Link>
 
                         {/* <div className='grid-card'> 
