@@ -1,4 +1,4 @@
-import Carousel from '../../components/carousel/Carousel.jsx';
+import Carousel from "../../components/carousel/Carousel.jsx";
 
 function Anime(){
     return(
