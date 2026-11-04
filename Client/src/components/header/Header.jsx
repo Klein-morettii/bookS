@@ -1,0 +1,30 @@
+import { Link } from "react-router-dom";
+
+import Search from '../searchbar/SearchBar';
+
+import './header.css'
+
+function Header(){
+    let logged = false;
+    return (
+        <header>
+            <div className="leftH">
+                
+                <Link className="siteName" to="/">Something</Link>
+            </div>
+
+            <div className="rightH">
+                <Search/>
+                {/* <img src={random} alt="gamble" className='random'/> */} 
+                {logged? (
+                    <button className="profileCircle">awsd</button>
+                ):(
+                    <Link className="profileSquare" to="/signIn">Log In</Link>
+                )}
+            </div>
+        </header>
+    );
+}
+
+export default Header;
+
